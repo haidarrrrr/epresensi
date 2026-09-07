@@ -1,7 +1,7 @@
 name: e_presensi
 description: Mobile Absensi SMAN 2 Tanggul
 environment:
-  sdk: ">=3.24.0 <4.0.0"
+  sdk: ">=3.13.0 <4.0.0"
 dependencies:
   flutter:
     sdk: flutter

@@ -10,6 +10,11 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.24.1'
+      - name: Verifikasi docker-compose
+        run: |
+          echo "Verifikasi: docker-compose.yml valid"
+          docker compose -f docker-compose.yml config > /dev/null || exit 1
+          echo "Docker-compose OK"
       - run: flutter pub get
       - run: flutter build web --release
       - run: flutter build apk --release
